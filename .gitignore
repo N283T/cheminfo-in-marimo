@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Claude Code
+CLAUDE.md
+plans/
+
+# marimo generated
+__marimo__/
