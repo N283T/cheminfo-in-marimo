@@ -7,6 +7,7 @@
 #     "matplotlib>=3.10.8",
 #     "numpy",
 #     "pandas>=3.0.1",
+#     "pyarrow",
 #     "rdkit>=2025.9.5",
 #     "scikit-learn",
 # ]
