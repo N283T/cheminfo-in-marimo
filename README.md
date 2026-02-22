@@ -6,10 +6,13 @@
 ## クイックスタート
 
 ```bash
-# uv で実行（PEP 723 メタデータから依存関係を自動解決）
-uv run marimo edit main.py
+# サンドボックスモード（推奨）— PEP 723 メタデータから依存関係を自動解決
+uvx marimo edit main.py --sandbox
 
-# または依存関係を先にインストール
+# marimo がインストール済みの場合
+marimo edit main.py --sandbox
+
+# または uv プロジェクトとして実行
 uv sync
 uv run marimo edit main.py
 ```
@@ -32,6 +35,12 @@ uv run marimo edit main.py
 - **Section G:** NCI SMILES ファイル (`first_5K.smi`, 500 分子を使用)
 
 外部ファイル不要 — すべて RDKit に同梱されています。
+
+## 設計方針
+
+構造式の描画には mols2grid などの専用ライブラリをあえて使わず、
+RDKit の `rdMolDraw2D` + marimo の `format_mapping` のみで実装しています。
+marimo の標準機能だけでどこまでできるかを示すことがチュートリアルの目的です。
 
 ## 依存関係
 
